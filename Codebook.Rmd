@@ -104,7 +104,7 @@ The cleanData data set contains the the following attributes that were done in s
 
 Variable information for the cleanDataset is included here for convenience.
 ```{r comment=""}
-cat(readLines("cleanData.txt"), sep = "\n")
+cat(readLines("cleanDataStructure.txt"), sep = "\n")
 ```
 
 ## Overview of the avgCleanDataset Data Set
@@ -122,5 +122,5 @@ each subject. It is derived from the cleanDataset mentioned above.
 
 Variable information for the avgCleanDataset is included here for convenience.
 ```{r comment=""}
-cat(readLines("avgCleanDataset.txt"), sep = "\n")
+cat(readLines("avgCleanDatasetStructure.txt"), sep = "\n")
 ```

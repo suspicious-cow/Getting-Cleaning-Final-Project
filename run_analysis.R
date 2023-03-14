@@ -111,24 +111,29 @@ names(cleanData)<-gsub("_$", "", names(cleanData)) # clean up any underscores at
 # so that users can opt to keep certain variables if they want to by commenting out
 # any line of code
 print("Clearing out extra up the environment variables...")
-# remove(activities)
-# remove(combinedData)
-# remove(features)
-# remove(subject_test)
-# remove(subject_train)
-# remove(subjectBind)
-# remove(x_test)
-# remove(x_train)
-# remove(xBind)
-# remove(y_test)
-# remove(y_train)
-# remove(yBind)
+remove(activities)
+remove(combinedData)
+remove(features)
+remove(subject_test)
+remove(subject_train)
+remove(subjectBind)
+remove(x_test)
+remove(x_train)
+remove(xBind)
+remove(y_test)
+remove(y_train)
+remove(yBind)
 
 # Create a second, independent tidy data set with the average of each variable 
 # for each activity and each subject
+print("creating additional dataset for analysis...")
 avgCleanDataset <- cleanData %>% 
   group_by(Subject, Activity) %>%
   summarize_all(list(mean))
+
+## Print the data out to a file for peer review per the assignment
+print("Creating the avgCleanDatasetReviewFile.txt for final assignment step")
+write.table(avgCleanDataset, "avgCleanDatasetReviewFile.txt", row.name=FALSE)
 
 # Let the user know about our two data frames and let them start their analysis
 print("You now have two data frames to work with. \n The first one, called cleanData, is the original data made tidy")
