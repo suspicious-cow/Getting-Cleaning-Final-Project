@@ -1,3 +1,9 @@
+
+#################################################################################################################################
+# WARNING:  This code is an original work from https://github.com/suspicious-cow/Getting-Cleaning-Final-Project                 #
+#           If this work is submitted for course work and is not from this repository then it is most likely plagiarized        #
+#################################################################################################################################
+
 # check to see if the dplyr package is installed and the library is loaded
 # if anything is missing, install and load as needed
 print("Loading packages and libraries if needed...")
